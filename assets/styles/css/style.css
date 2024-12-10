@@ -435,6 +435,8 @@ table {
   border: 1px solid #E3E3E3;
   border-radius: 8px;
   list-style: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .info-left-faq details summary span {
   font-family: "Roboto Condensad", sans-serif;
