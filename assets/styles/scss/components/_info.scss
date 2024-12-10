@@ -1,0 +1,148 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 96px;
+  padding: 96px;
+
+  @media all and (max-width: 1440px) {
+    gap: 48px;
+    padding: 48px;
+  }
+
+  @media all and (max-width: 1024px) {
+    gap: 56px;
+    padding: 56px 32px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media all and (max-width: 670px) {
+    gap: 16px;
+    padding: 40px 16px;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    flex: 1;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 24px;
+
+      &-title {
+        font-family: "Roboto Condensad", sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+
+        @media all and (max-width: 1024px) {
+          font-size: 40px;
+          line-height: 48px;
+        }
+      }
+
+      &-subtitle {
+        font-size: 20px;
+        text-align: center;
+        color: #727272;
+      }
+    }
+
+    &-faq {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      details {
+        summary {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          padding: 20px 24px;
+          cursor: pointer;
+          background-color: #FAFAFA;
+          border: 1px solid #E3E3E3;
+
+          border-radius: 8px;
+
+          list-style: none;
+
+          span {
+            font-family: "Roboto Condensad", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #353535;
+          }
+        }
+
+        p {
+          padding: 20px 24px;
+          background-color: #FEFEFE;
+
+          border: 1px solid #E3E3E3;
+          border-radius: 0 0 8px 8px;
+          border-top: none;
+
+          font-size: 16px;
+          line-height: 20px;
+          color: #464646;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease;
+        }
+
+        &[open] {
+          summary {
+            border-radius: 8px 8px 0 0;
+
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+
+    img {
+      max-width: 100%;
+    }
+
+    &-top {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+
+      img {
+        max-width: calc(50% - 12px);
+      }
+    }
+  }
+}
