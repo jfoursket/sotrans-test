@@ -89,19 +89,20 @@
               justify-content: flex-start;
               align-items: center;
 
-              padding: 10px 12px;
-
               width: 256px;
 
               a {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 gap: 8px;
+                padding: 10px 12px;
 
                 font-size: 14px;
                 line-height: 20px;
                 color: #555555;
+
+                width: 100%;
 
                 svg {
                   width: 16px;
@@ -158,8 +159,6 @@
   }
 
   @media all and (max-width: 1024px) {
-    //position: relative;
-
     &-nav {
       display: none;
     }
@@ -191,7 +190,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 16px 32px;
+        padding: 32px 16px;
         width: 100%;
 
         .nav-item {
@@ -204,6 +203,14 @@
           ul {
             position: relative;
             border-radius: unset;
+
+            li {
+              width: 100%;
+
+              a {
+                justify-content: flex-start;
+              }
+            }
           }
         }
       }

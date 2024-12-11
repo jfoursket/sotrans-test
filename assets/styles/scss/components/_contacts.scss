@@ -162,7 +162,7 @@
       .data-input {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: 8px;
 
         input {
@@ -186,10 +186,6 @@
           span {
             text-decoration: underline;
           }
-        }
-
-        @media all and (max-width: 670px) {
-          align-items: flex-start;
         }
       }
     }

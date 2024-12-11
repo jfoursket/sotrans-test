@@ -155,17 +155,18 @@ table {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 12px;
   width: 256px;
 }
 .header-nav ul li.open ul li a {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
+  padding: 10px 12px;
   font-size: 14px;
   line-height: 20px;
   color: #555555;
+  width: 100%;
 }
 .header-nav ul li.open ul li a svg {
   width: 16px;
@@ -232,7 +233,7 @@ table {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 16px 32px;
+    padding: 32px 16px;
     width: 100%;
   }
   .header-nav.menu-open .nav-items .nav-item {
@@ -244,6 +245,12 @@ table {
   .header-nav.menu-open .nav-items .nav-item ul {
     position: relative;
     border-radius: unset;
+  }
+  .header-nav.menu-open .nav-items .nav-item ul li {
+    width: 100%;
+  }
+  .header-nav.menu-open .nav-items .nav-item ul li a {
+    justify-content: flex-start;
   }
 }
 
@@ -725,7 +732,7 @@ table {
 .contacts-content .content-form .data-input {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 .contacts-content .content-form .data-input input {
@@ -744,11 +751,6 @@ table {
 }
 .contacts-content .content-form .data-input label span {
   text-decoration: underline;
-}
-@media all and (max-width: 670px) {
-  .contacts-content .content-form .data-input {
-    align-items: flex-start;
-  }
 }
 
 .footer-top {
@@ -838,6 +840,10 @@ table {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
