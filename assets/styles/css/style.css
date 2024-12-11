@@ -504,6 +504,12 @@ table {
   background-color: #EFEFEF;
   overflow: hidden;
 }
+@media all and (max-width: 1024px) {
+  .social {
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+}
 
 .numbers {
   padding: 96px;

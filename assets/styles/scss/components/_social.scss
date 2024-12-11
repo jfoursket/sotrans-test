@@ -6,4 +6,9 @@
   padding: 96px;
   background-color: #EFEFEF;
   overflow: hidden;
+
+  @media all and (max-width: 1024px) {
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
 }
