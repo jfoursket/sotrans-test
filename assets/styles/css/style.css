@@ -532,6 +532,7 @@ table {
 @media all and (max-width: 670px) {
   .numbers {
     padding: 40px 16px;
+    flex-direction: column;
   }
 }
 .numbers-item {
@@ -589,6 +590,11 @@ table {
   color: #353535;
   text-align: center;
   white-space: nowrap;
+}
+@media all and (max-width: 670px) {
+  .numbers-item p:last-child {
+    white-space: pre-wrap;
+  }
 }
 
 .contacts {
