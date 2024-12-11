@@ -734,14 +734,43 @@ table {
   justify-content: center;
   align-items: flex-start;
   gap: 8px;
+  position: relative;
 }
-.contacts-content .content-form .data-input input {
-  width: 16px;
-  height: 16px;
-  background-color: #CCCCCC;
-  outline: none;
-  border: none;
+.contacts-content .content-form .data-input input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  left: 0;
   cursor: pointer;
+  margin: 0;
+  z-index: 2;
+}
+.contacts-content .content-form .data-input .custom-checkbox {
+  position: relative;
+  z-index: 1;
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 2px;
+  padding: 2px;
+  background-color: #b7b7b7;
+  transition: all 0.3s ease;
+}
+.contacts-content .content-form .data-input .custom-checkbox svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10.6px;
+  height: 7.6px;
+  opacity: 0;
+}
+.contacts-content .content-form .data-input input[type=checkbox]:checked + .custom-checkbox {
+  background-color: #EB5A0A;
+  position: relative;
+}
+.contacts-content .content-form .data-input input[type=checkbox]:checked + .custom-checkbox svg {
+  opacity: 1;
 }
 .contacts-content .content-form .data-input label {
   color: #555555;
